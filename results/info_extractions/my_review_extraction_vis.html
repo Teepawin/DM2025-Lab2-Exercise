@@ -1,0 +1,231 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+<span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">Visually, Gravity is unlike what we have seen on a cinema screen before</span> and <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">arguably it has one of the 
+best uses of 3D in a movie</span>. <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">The</span> seƫng is spectacular and <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">the premise is</span> invenƟve. 
+
+On every other front,the movie falters badly. Once you get over the iniƟal wonderment surrounding the 
+beauƟful visuals, <span class="lx-highlight" data-idx="4" style="background-color:#C8E6C9;">the chinks start showing up</span>. Overall <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">the script is very weak</span>. Apparently the Russians 
+bomb their own satellite by mistake and the debris is flying around at bullet speed, smashing everything 
+in its way. Now upon hearing an emergency evacuaƟon request, Kowalski (who has been wasƟng his 
+precious thrusters all this while, floaƟng around, spouƟng inane dialogs) orders Ryan (Bullock) to 
+disengage from whatever she is repairing. Apparently Ryan has six months of training (only) and <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">fails to 
+be responsive</span> and then the trouble starts. 
+
+We come to know that Ryan has some head issues surrounding the death of her daughter as <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">the writer 
+felt a dire need to give Ryan some sort of</span> existenƟal problem in her head to make her character feel 
+more human. Apart from this minor bit, <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">nothing is presented in terms of character development for any 
+other protagonists</span>. Who is Kowalski? Who are the people who died in their space pods? No idea. 
+
+Then <span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">the whole manufactured sense of suspense</span>. Every Ɵme Ryan gets anywhere near the Air Lock (she 
+does it three Ɵmes), the debris presents itself like on cue every single Ɵme. Then a fire in a space staƟon, 
+then running out of Oxygen, then something then something. It&#x27;s fine that they used some standard 
+tricks but <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">it all seems so manufactured and mechanical by the numbers suspense</span>. 
+
+Also at Ɵmes <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">I couldn&#x27;t shrug off the feeling that what they are showing on screen is not actually factual</span>. 
+<span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">Do the controls on various</span> internaƟonal space staƟons have their naƟonal languages on them? Really? 
+Maybe they do but <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">seems hard to believe</span> when 20$ phones are built with custom User interfaces with 
+changeable languages, why have your billion dollar space staƟons with Russian or Chinese characters on 
+your butons <span class="lx-highlight" data-idx="14" style="background-color:#D2E3FC;">totally beats me</span>. <span class="lx-highlight" data-idx="15" style="background-color:#C8E6C9;">Oh manufactured suspense</span> owing to the whole can&#x27;t-understand-this-
+thing machinery. 
+
+The <span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">the dialogs when they come are nothing to write home about</span>. <span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">Ryan has a hallucinatory moment 
+when she talks to herself following some Mandarin Chater on the radio which is cringe worthy</span>. I wont 
+even menƟon the <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">in-your-face allegory about rebirth which is there for to make the movie seem deeper 
+than it is</span>. 
+
+So what works for the movie? <span class="lx-highlight" data-idx="19" style="background-color:#C8E6C9;">It&#x27;s a cross between an IMAX documentary with some suspense elements 
+thrown it which makes it look path breaking</span>. 
+
+<span class="lx-highlight" data-idx="20" style="background-color:#C8E6C9;">But it&#x27;s not.</span> <span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">Not a bad watch but nothing to rave about either.</span> 
+From: htps://www.imdb.com/Ɵtle/t1454468/reviews/
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="21" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/22</span> |
+          Pos <span id="posInfo">[15-86]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "Visually, Gravity is unlike what we have seen on a cinema screen before", "color": "#C8E6C9", "startPos": 15, "endPos": 86, "beforeText": "**Page 1**\n&quot;&quot;&quot;\n", "extractionText": "Visually, Gravity is unlike what we have seen on a cinema screen before", "afterText": " and arguably it has one of the \nbest uses of 3D in a movie. The se\u01abng is spectacular and the premise is inven\u019fve. \n \nOn every other front,the movie f", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">visuals</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">unlike what we have seen on a cinema screen before</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "arguably it has one of the best uses of 3D in a movie", "color": "#C8E6C9", "startPos": 91, "endPos": 145, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nVisually, Gravity is unlike what we have seen on a cinema screen before and ", "extractionText": "arguably it has one of the \nbest uses of 3D in a movie", "afterText": ". The se\u01abng is spectacular and the premise is inven\u019fve. \n \nOn every other front,the movie falters badly. Once you get over the ini\u019fal wonderment surro", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">3D</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">best uses of 3D</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "The setting is spectacular", "color": "#C8E6C9", "startPos": 147, "endPos": 150, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nVisually, Gravity is unlike what we have seen on a cinema screen before and arguably it has one of the \nbest uses of 3D in a movie. ", "extractionText": "The", "afterText": " se\u01abng is spectacular and the premise is inven\u019fve. \n \nOn every other front,the movie falters badly. Once you get over the ini\u019fal wonderment surroundin", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">setting</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">spectacular</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "the premise is inventive", "color": "#C8E6C9", "startPos": 176, "endPos": 190, "beforeText": "ravity is unlike what we have seen on a cinema screen before and arguably it has one of the \nbest uses of 3D in a movie. The se\u01abng is spectacular and ", "extractionText": "the premise is", "afterText": " inven\u019fve. \n \nOn every other front,the movie falters badly. Once you get over the ini\u019fal wonderment surrounding the \nbeau\u019fful visuals, the chinks star", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">premise</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">inventive</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "the chinks start showing up", "color": "#C8E6C9", "startPos": 325, "endPos": 352, "beforeText": " the premise is inven\u019fve. \n \nOn every other front,the movie falters badly. Once you get over the ini\u019fal wonderment surrounding the \nbeau\u019fful visuals, ", "extractionText": "the chinks start showing up", "afterText": ". Overall the script is very weak. Apparently the Russians \nbomb their own satellite by mistake and the debris is flying around at bullet speed, smash", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">chinks start showing up</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "the script is very weak", "color": "#C8E6C9", "startPos": 362, "endPos": 385, "beforeText": " other front,the movie falters badly. Once you get over the ini\u019fal wonderment surrounding the \nbeau\u019fful visuals, the chinks start showing up. Overall ", "extractionText": "the script is very weak", "afterText": ". Apparently the Russians \nbomb their own satellite by mistake and the debris is flying around at bullet speed, smashing everything \nin its way. Now u", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">script</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">very weak</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "fails to be responsive", "color": "#C8E6C9", "startPos": 810, "endPos": 833, "beforeText": "und, spou\u019fng inane dialogs) orders Ryan (Bullock) to \ndisengage from whatever she is repairing. Apparently Ryan has six months of training (only) and ", "extractionText": "fails to \nbe responsive", "afterText": " and then the trouble starts. \n \nWe come to know that Ryan has some head issues surrounding the death of her daughter as the writer \nfelt a dire need ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">character</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">fails to be responsive</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "the writer felt a dire need to give Ryan some sort of existential problem in her head to make her character feel more human", "color": "#C8E6C9", "startPos": 954, "endPos": 1008, "beforeText": ") and fails to \nbe responsive and then the trouble starts. \n \nWe come to know that Ryan has some head issues surrounding the death of her daughter as ", "extractionText": "the writer \nfelt a dire need to give Ryan some sort of", "afterText": " existen\u019fal problem in her head to make her character feel \nmore human. Apart from this minor bit, nothing is presented in terms of character developm", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">character development</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">dire need to give Ryan some sort of existential problem</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "nothing is presented in terms of character development for any other protagonists", "color": "#C8E6C9", "startPos": 1107, "endPos": 1189, "beforeText": " writer \nfelt a dire need to give Ryan some sort of existen\u019fal problem in her head to make her character feel \nmore human. Apart from this minor bit, ", "extractionText": "nothing is presented in terms of character development for any \nother protagonists", "afterText": ". Who is Kowalski? Who are the people who died in their space pods? No idea. \n \nThen the whole manufactured sense of suspense. Every \u019fme Ryan gets any", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">character development</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">nothing is presented</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "the whole manufactured sense of suspense", "color": "#C8E6C9", "startPos": 1274, "endPos": 1314, "beforeText": "ted in terms of character development for any \nother protagonists. Who is Kowalski? Who are the people who died in their space pods? No idea. \n \nThen ", "extractionText": "the whole manufactured sense of suspense", "afterText": ". Every \u019fme Ryan gets anywhere near the Air Lock (she \ndoes it three \u019fmes), the debris presents itself like on cue every single \u019fme. Then a fire in a ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">suspense</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">manufactured sense of suspense</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "it all seems so manufactured and mechanical by the numbers suspense", "color": "#C8E6C9", "startPos": 1589, "endPos": 1656, "beforeText": "le \u019fme. Then a fire in a space sta\u019fon, \nthen running out of Oxygen, then something then something. It&#x27;s fine that they used some standard \ntricks but ", "extractionText": "it all seems so manufactured and mechanical by the numbers suspense", "afterText": ". \n \nAlso at \u019fmes I couldn&#x27;t shrug off the feeling that what they are showing on screen is not actually factual. \nDo the controls on various interna\u019fo", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">suspense</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">manufactured and mechanical by the numbers suspense</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "I couldn't shrug off the feeling that what they are showing on screen is not actually factual", "color": "#C8E6C9", "startPos": 1674, "endPos": 1767, "beforeText": "en something. It&#x27;s fine that they used some standard \ntricks but it all seems so manufactured and mechanical by the numbers suspense. \n \nAlso at \u019fmes ", "extractionText": "I couldn&#x27;t shrug off the feeling that what they are showing on screen is not actually factual", "afterText": ". \nDo the controls on various interna\u019fonal space sta\u019fons have their na\u019fonal languages on them? Really? \nMaybe they do but seems hard to believe when 2", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">realism</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">not actually factual</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "Do the controls on various international space stations have their national languages on them? Really?", "color": "#C8E6C9", "startPos": 1770, "endPos": 1796, "beforeText": "d mechanical by the numbers suspense. \n \nAlso at \u019fmes I couldn&#x27;t shrug off the feeling that what they are showing on screen is not actually factual. \n", "extractionText": "Do the controls on various", "afterText": " interna\u019fonal space sta\u019fons have their na\u019fonal languages on them? Really? \nMaybe they do but seems hard to believe when 20$ phones are built with cust", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">realism</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">national languages on them? Really?</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "seems hard to believe", "color": "#C8E6C9", "startPos": 1889, "endPos": 1910, "beforeText": "reen is not actually factual. \nDo the controls on various interna\u019fonal space sta\u019fons have their na\u019fonal languages on them? Really? \nMaybe they do but ", "extractionText": "seems hard to believe", "afterText": " when 20$ phones are built with custom User interfaces with \nchangeable languages, why have your billion dollar space sta\u019fons with Russian or Chinese ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">realism</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">hard to believe</span>}</div>"}, {"index": 14, "class": "audience_impact", "text": "totally beats me", "color": "#D2E3FC", "startPos": 2087, "endPos": 2103, "beforeText": "with custom User interfaces with \nchangeable languages, why have your billion dollar space sta\u019fons with Russian or Chinese characters on \nyour butons ", "extractionText": "totally beats me", "afterText": ". Oh manufactured suspense owing to the whole can&#x27;t-understand-this-\nthing machinery. \n \nThe the dialogs when they come are nothing to write home abou", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">confusion</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">billion dollar space stations with Russian or Chinese characters on buttons</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the reviewer</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "Oh manufactured suspense", "color": "#C8E6C9", "startPos": 2105, "endPos": 2129, "beforeText": "nterfaces with \nchangeable languages, why have your billion dollar space sta\u019fons with Russian or Chinese characters on \nyour butons totally beats me. ", "extractionText": "Oh manufactured suspense", "afterText": " owing to the whole can&#x27;t-understand-this-\nthing machinery. \n \nThe the dialogs when they come are nothing to write home about. Ryan has a hallucinator", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">suspense</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">manufactured suspense</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "the dialogs when they come are nothing to write home about", "color": "#C8E6C9", "startPos": 2196, "endPos": 2254, "beforeText": "an or Chinese characters on \nyour butons totally beats me. Oh manufactured suspense owing to the whole can&#x27;t-understand-this-\nthing machinery. \n \nThe ", "extractionText": "the dialogs when they come are nothing to write home about", "afterText": ". Ryan has a hallucinatory moment \nwhen she talks to herself following some Mandarin Chater on the radio which is cringe worthy. I wont \neven men\u019fon t", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">dialog</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">nothing to write home about</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "Ryan has a hallucinatory moment when she talks to herself following some Mandarin Chater on the radio which is cringe worthy", "color": "#C8E6C9", "startPos": 2256, "endPos": 2381, "beforeText": "h manufactured suspense owing to the whole can&#x27;t-understand-this-\nthing machinery. \n \nThe the dialogs when they come are nothing to write home about. ", "extractionText": "Ryan has a hallucinatory moment \nwhen she talks to herself following some Mandarin Chater on the radio which is cringe worthy", "afterText": ". I wont \neven men\u019fon the in-your-face allegory about rebirth which is there for to make the movie seem deeper \nthan it is. \n \nSo what works for the m", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">character action</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">cringe worthy</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "in-your-face allegory about rebirth which is there for to make the movie seem deeper than it is", "color": "#C8E6C9", "startPos": 2407, "endPos": 2503, "beforeText": "yan has a hallucinatory moment \nwhen she talks to herself following some Mandarin Chater on the radio which is cringe worthy. I wont \neven men\u019fon the ", "extractionText": "in-your-face allegory about rebirth which is there for to make the movie seem deeper \nthan it is", "afterText": ". \n \nSo what works for the movie? It&#x27;s a cross between an IMAX documentary with some suspense elements \nthrown it which makes it look path breaking. \n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">allegory</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">in-your-face allegory</span>}</div>"}, {"index": 19, "class": "opinion_statement", "text": "It's a cross between an IMAX documentary with some suspense elements thrown it which makes it look path breaking", "color": "#C8E6C9", "startPos": 2537, "endPos": 2650, "beforeText": "nt \neven men\u019fon the in-your-face allegory about rebirth which is there for to make the movie seem deeper \nthan it is. \n \nSo what works for the movie? ", "extractionText": "It&#x27;s a cross between an IMAX documentary with some suspense elements \nthrown it which makes it look path breaking", "afterText": ". \n \nBut it&#x27;s not. Not a bad watch but nothing to rave about either. \nFrom: htps://www.imdb.com/\u019ftle/t1454468/reviews/\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">visuals and suspense</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">path breaking</span>}</div>"}, {"index": 20, "class": "opinion_statement", "text": "But it's not.", "color": "#C8E6C9", "startPos": 2655, "endPos": 2668, "beforeText": "\n \nSo what works for the movie? It&#x27;s a cross between an IMAX documentary with some suspense elements \nthrown it which makes it look path breaking. \n \n", "extractionText": "But it&#x27;s not.", "afterText": " Not a bad watch but nothing to rave about either. \nFrom: htps://www.imdb.com/\u019ftle/t1454468/reviews/\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">overall film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">it&#x27;s not</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "Not a bad watch but nothing to rave about either.", "color": "#C8E6C9", "startPos": 2669, "endPos": 2718, "beforeText": "ks for the movie? It&#x27;s a cross between an IMAX documentary with some suspense elements \nthrown it which makes it look path breaking. \n \nBut it&#x27;s not. ", "extractionText": "Not a bad watch but nothing to rave about either.", "afterText": " \nFrom: htps://www.imdb.com/\u019ftle/t1454468/reviews/\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">overall film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">nothing to rave about</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
